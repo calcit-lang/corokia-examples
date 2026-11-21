@@ -1,19 +1,20 @@
+# Corokia Examples
 
-Phlox Examples
-----
+这个仓库提供 Corokia 示例索引。原运行时解释器已退役，页面保留示例源码入口。
 
-> for phlox.calcit.
+## 开发
 
-### Usages
+使用正式 Calcit / `@calcit/procs` 0.44.0、Node 24 和 Yarn 4.18.0。更新依赖后重新安装模块并构建；Respo 补丁更新可能影响样式。
 
-
-Install [calcit-runner](https://github.com/Cirru/calcit-runner.nim) to run demo:
-```bash
-cr
+```sh
+caps --strict --ci
+yarn install --immutable
+caps verify --toolchain
+calcit --check-only --all-defs
+calcit fix --workflow strict --verify
+yarn build
 ```
 
-Notice that the loaded modules comes from [phlox.calcit](https://github.com/Quamolit/phlox.calcit).
+源码维护 `calcit.cirru` 和 `deps.cirru`，不提交生成的 `js-out` 或 `dist`。
 
-### License
-
-MIT
+PR 前端资源使用独立 COS 前缀和 action 内置校验；main / master 的 rsync 目标保持原仓库目录。
