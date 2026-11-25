@@ -4,7 +4,7 @@
 
 ## 开发
 
-使用正式 Calcit / `@calcit/procs` 0.44.0、Node 24 和 Yarn 4.18.0。更新依赖后重新安装模块并构建；Respo 补丁更新可能影响样式。
+使用正式 Calcit / `@calcit/procs` 0.45.1、Node 24 和 Yarn 4.18.0。更新依赖后重新安装模块并构建；Respo 补丁更新可能影响样式。
 
 ```sh
 caps --strict --ci
